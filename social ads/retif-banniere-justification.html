@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retif — Justification de la bannière "Signez votre savoir-faire"</title>
+<style>
+  :root{
+    --retif-red:#E2231A;
+    --retif-red-dark:#B81B14;
+    --ink:#0d0d0d;
+    --graphite:#2b2f33;
+    --steel:#6b7178;
+    --mist:#eef0f2;
+    --paper:#ffffff;
+    --line:#e3e6ea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Helvetica Neue','Inter','Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  /* NAV */
+  .nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:50}
+  .nav-inner{max-width:1200px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+  .nav-logo{display:flex;align-items:center}
+  .nav ul{display:flex;gap:24px;list-style:none;font-size:13px;color:var(--steel);flex-wrap:wrap}
+  .nav ul a{text-decoration:none;font-weight:500}
+  .nav ul a:hover{color:var(--retif-red)}
+  .badge-brief{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--retif-red);font-weight:700;padding:4px 10px;border:1px solid var(--retif-red);border-radius:99px;white-space:nowrap}
+
+  /* HERO */
+  .hero{background:#0d0d0d;color:#fff;padding:90px 28px 80px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(226,35,26,.18) 0%,transparent 70%);pointer-events:none}
+  .hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+  .hero-logo-block{display:flex;align-items:center;gap:30px;margin-bottom:34px;flex-wrap:wrap}
+  .hero-tag{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#9aa0a6;font-weight:600;border-left:3px solid var(--retif-red);padding-left:14px}
+  .hero h1{font-size:56px;line-height:1.05;letter-spacing:-1.5px;font-weight:900;margin-bottom:24px;max-width:900px}
+  .hero h1 em{font-style:normal;color:var(--retif-red)}
+  .hero p.lead{font-size:19px;color:#cfd3d8;max-width:680px;margin-bottom:46px}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .kpi{background:rgba(255,255,255,.06);padding:24px 22px;border-radius:12px;border:1px solid rgba(255,255,255,.1)}
+  .kpi .num{font-size:36px;font-weight:900;color:var(--retif-red);line-height:1}
+  .kpi .lbl{font-size:13px;color:#c8ccd1;margin-top:8px;letter-spacing:.5px}
+
+  /* SECTIONS */
+  section{padding:80px 28px}
+  .wrap{max-width:1200px;margin:0 auto}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--retif-red);font-weight:700;margin-bottom:14px}
+  .eyebrow .num{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--retif-red);color:#fff;align-items:center;justify-content:center;font-size:11px}
+  h2.section-title{font-size:38px;line-height:1.1;font-weight:900;letter-spacing:-.5px;margin-bottom:14px;max-width:840px}
+  .section-intro{color:var(--steel);font-size:17px;max-width:760px;margin-bottom:40px}
+
+  /* PRÉSENTATION */
+  .story-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:start}
+  .story-grid p{font-size:16px;color:var(--graphite);margin-bottom:16px}
+  .story-grid p strong{color:var(--ink)}
+  .story-side{background:var(--mist);border-radius:14px;padding:30px;border-left:4px solid var(--retif-red)}
+  .story-side h4{font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--retif-red);margin-bottom:16px;font-weight:800}
+  .story-side ul{list-style:none}
+  .story-side li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .story-side li:last-child{border-bottom:0}
+  .story-side li b{color:var(--ink)}
+
+  /* CLIENTS */
+  .clients-section{background:var(--mist)}
+  .clients-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .clients-table th,.clients-table td{padding:16px 20px;text-align:left;font-size:15px;vertical-align:middle}
+  .clients-table thead{background:var(--ink);color:#fff}
+  .clients-table th{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+  .clients-table tbody tr{border-top:1px solid var(--line)}
+  .clients-table tbody tr:nth-child(odd){background:#fafbfc}
+  .rank{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--retif-red);color:#fff;font-weight:800;font-size:13px}
+  .bar{height:8px;border-radius:4px;background:var(--mist);overflow:hidden;width:140px}
+  .bar > span{display:block;height:100%;background:linear-gradient(90deg,var(--retif-red),var(--retif-red-dark))}
+
+  /* OFFRE */
+  .offre-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .offre{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;transition:all .2s}
+  .offre:hover{border-color:var(--retif-red);transform:translateY(-3px);box-shadow:0 12px 30px rgba(226,35,26,.08)}
+  .offre .ico{width:42px;height:42px;border-radius:10px;background:#fff1f0;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--retif-red);font-size:20px;font-weight:900}
+  .offre h4{font-size:17px;font-weight:800;margin-bottom:6px}
+  .offre p{font-size:14px;color:var(--steel)}
+  .offre.featured{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .offre.featured h4{color:#fff}
+  .offre.featured p{color:#c8ccd1}
+  .offre.featured .ico{background:rgba(226,35,26,.2)}
+
+  /* CAMPAGNE */
+  .campagne-section{background:var(--ink);color:#fff;padding:80px 28px}
+  .campagne-section h2.section-title{color:#fff}
+  .campagne-section .section-intro{color:#c8ccd1}
+  .campagne-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center;margin-top:40px}
+  .campagne-text h3{font-size:22px;font-weight:800;margin-bottom:14px;color:#fff}
+  .campagne-text p{color:#c8ccd1;margin-bottom:14px;font-size:16px}
+  .campagne-meta{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .campagne-meta div{padding:14px;background:rgba(255,255,255,.06);border-radius:10px;font-size:13px}
+  .campagne-meta b{display:block;color:var(--retif-red);text-transform:uppercase;letter-spacing:1.5px;font-size:11px;margin-bottom:4px}
+
+  .banner-real{width:100%;max-width:520px;justify-self:center;margin:0;display:flex;flex-direction:column;gap:14px}
+  .banner-real img{width:100%;height:auto;border-radius:14px;box-shadow:0 25px 60px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08);display:block}
+  .banner-real figcaption{font-size:12px;color:#9aa0a6;letter-spacing:1.5px;text-transform:uppercase;text-align:center;font-weight:600}
+
+  /* Justif courte */
+  .justif-block{margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .justif-col{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--retif-red);border-radius:12px;padding:28px}
+  .justif-tag{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--retif-red);font-weight:800;margin-bottom:10px}
+  .justif-col h3{font-size:22px;line-height:1.2;font-weight:900;color:#fff;margin-bottom:12px;letter-spacing:-.3px}
+  .justif-col p{color:#cfd3d8;font-size:15px;line-height:1.6;margin:0}
+  .justif-col p b{color:#fff}
+
+  /* Déclinaisons */
+  .declinaisons{margin-top:70px;padding-top:50px;border-top:1px solid rgba(255,255,255,.1)}
+  .decli-title{font-size:26px;font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.3px}
+  .decli-intro{color:#9aa0a6;font-size:15px;margin-bottom:36px;max-width:720px}
+  .decli-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end}
+  .decli-card{margin:0;display:flex;flex-direction:column;gap:14px}
+  .decli-img-wrap{width:100%;background:rgba(0,0,0,.3);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.08)}
+  .decli-img-wrap.ratio-1-1{aspect-ratio:1/1}
+  .decli-img-wrap.ratio-4-5{aspect-ratio:4/5}
+  .decli-img-wrap.ratio-9-16{aspect-ratio:9/16}
+  .decli-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+  .decli-card figcaption{display:flex;flex-direction:column;gap:4px}
+  .decli-ratio{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--retif-red);font-weight:800}
+  .decli-card b{color:#fff;font-size:15px;font-weight:800}
+  .decli-card small{color:#9aa0a6;font-size:12.5px;line-height:1.4}
+
+  /* CIBLE */
+  .cible-section{background:var(--mist)}
+  .persona-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+  .persona{background:#fff;border-radius:14px;padding:28px;display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start}
+  .persona .avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--retif-red),var(--retif-red-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900}
+  .persona h4{font-size:17px;font-weight:800;margin-bottom:4px}
+  .persona .role{font-size:13px;color:var(--retif-red);font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+  .persona p{font-size:14px;color:var(--graphite)}
+  .persona .needs{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+  .persona .needs span{font-size:11px;background:var(--mist);padding:4px 10px;border-radius:99px;color:var(--graphite);font-weight:600}
+
+  /* POURQUOI */
+  .pourquoi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pq{padding:28px;border-top:3px solid var(--retif-red);background:#fff;border-radius:0 0 12px 12px;box-shadow:0 4px 14px rgba(0,0,0,.04)}
+  .pq .num{font-size:42px;font-weight:900;color:var(--retif-red);line-height:1;margin-bottom:8px}
+  .pq h4{font-size:17px;font-weight:800;margin-bottom:8px}
+  .pq p{font-size:14px;color:var(--steel)}
+
+  /* ÉMOTION */
+  .emotion-section{background:linear-gradient(135deg,#1f2226,#3d4248);color:#fff}
+  .emotion-section h2.section-title{color:#fff}
+  .emotion-section .section-intro{color:#c8ccd1}
+  .emo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  .emo{padding:24px;background:rgba(255,255,255,.05);border-radius:12px;border:1px solid rgba(255,255,255,.1);text-align:center}
+  .emo .icon{font-size:30px;margin-bottom:10px}
+  .emo h5{font-size:15px;font-weight:800;margin-bottom:6px}
+  .emo p{font-size:13px;color:#c8ccd1}
+  .quote{margin-top:50px;padding:30px;border-left:4px solid var(--retif-red);background:rgba(0,0,0,.25);font-size:20px;font-style:italic;line-height:1.5;max-width:780px}
+
+  /* SYNTHÈSE */
+  .synthese{background:var(--retif-red);color:#fff;text-align:center;padding:80px 28px}
+  .synthese h2{font-size:38px;font-weight:900;margin-bottom:18px;letter-spacing:-.5px;line-height:1.1}
+  .synthese p{font-size:17px;max-width:720px;margin:0 auto 30px;opacity:.95}
+  .synthese .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:40px auto 0}
+  .pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:22px;border-radius:12px}
+  .pill h5{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;opacity:.85}
+  .pill p{font-size:15px;opacity:1}
+
+  /* CONCURRENTS */
+  .concurrents-section{background:#fff}
+  .concu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+  .concu-card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;transition:all .2s}
+  .concu-card.us{border-color:var(--retif-red);box-shadow:0 8px 24px rgba(226,35,26,.12)}
+  .concu-card .logo-box{height:72px;display:flex;align-items:center;justify-content:center;background:var(--mist);border-radius:10px;padding:10px}
+  .concu-card.us .logo-box{background:#0d0d0d}
+  .concu-card .logo-box img{max-height:50px;width:auto}
+  .concu-card h4{font-size:18px;font-weight:900;letter-spacing:-.3px}
+  .concu-card .tag-line{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--steel);font-weight:700;margin-top:-8px}
+  .concu-card.us .tag-line{color:var(--retif-red)}
+  .concu-card p{font-size:14px;color:var(--graphite);line-height:1.55}
+  .concu-card ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13px}
+  .concu-card li{display:flex;gap:8px;color:var(--graphite)}
+  .concu-card li::before{content:"›";color:var(--retif-red);font-weight:900}
+
+  /* Logos recréés en CSS (Metro / Rouxel) */
+  .fake-logo{font-family:'Arial Black',Impact,'Helvetica Neue',sans-serif;font-weight:900;display:inline-flex;align-items:center;gap:6px}
+  .logo-metro{background:#FFCC00;padding:8px 16px;border-radius:4px;color:#003F7F;font-size:26px;letter-spacing:1px}
+  .logo-metro::before{content:"M";display:inline-flex;width:30px;height:30px;background:#003F7F;color:#FFCC00;border-radius:50%;align-items:center;justify-content:center;font-size:20px;margin-right:6px}
+  .logo-rouxel{color:#C8102E;font-size:30px;letter-spacing:-1px;border-bottom:4px solid #C8102E;padding-bottom:2px}
+
+  /* Tableau comparatif */
+  .compare-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:36px}
+  .compare-table th,.compare-table td{padding:14px 18px;text-align:left;font-size:14px;border-bottom:1px solid var(--line)}
+  .compare-table thead{background:var(--ink);color:#fff}
+  .compare-table th{font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:700}
+  .compare-table th.us-col,.compare-table td.us-col{background:rgba(226,35,26,.05);border-left:3px solid var(--retif-red);border-right:3px solid var(--retif-red)}
+  .compare-table th.us-col{background:var(--retif-red);color:#fff}
+  .compare-table td:first-child{font-weight:700;color:var(--ink);background:#fafbfc;width:200px}
+  .compare-table .yes{color:#16a34a;font-weight:800}
+  .compare-table .no{color:#9aa0a6}
+  .compare-table .partial{color:#f59e0b;font-weight:700}
+
+  /* BUDGET */
+  .budget-section{background:#fafbfc;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .hyp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px}
+  .hyp{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+  .hyp .hyp-num{font-size:28px;font-weight:900;color:var(--retif-red);line-height:1}
+  .hyp .hyp-lbl{font-size:12px;color:var(--steel);margin-top:6px;letter-spacing:.5px;line-height:1.3}
+
+  /* Funnel chiffré */
+  .funnel{display:flex;flex-direction:column;gap:6px;max-width:780px;margin:0 auto 30px}
+  .funnel-step{background:#fff;border:1px solid var(--line);padding:14px 22px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+  .funnel-step b{font-size:18px;color:var(--retif-red);font-weight:900;font-variant-numeric:tabular-nums}
+  .funnel-step .label{font-weight:700;color:var(--ink)}
+  .funnel-step .rate{font-size:12px;color:var(--steel);font-style:italic}
+  .funnel-step:nth-child(1){background:var(--ink);color:#fff;border-color:var(--ink);width:100%}
+  .funnel-step:nth-child(1) .label,.funnel-step:nth-child(1) b{color:#fff}
+  .funnel-step:nth-child(2){width:85%;align-self:center}
+  .funnel-step:nth-child(3){width:65%;align-self:center}
+  .funnel-step:nth-child(4){width:45%;align-self:center;background:var(--retif-red);color:#fff;border-color:var(--retif-red)}
+  .funnel-step:nth-child(4) .label,.funnel-step:nth-child(4) b{color:#fff}
+
+  /* Mix budget */
+  .budget-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .split-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+  .split-card h4{font-size:14px;letter-spacing:1.5px;text-transform:uppercase;color:var(--retif-red);margin-bottom:18px;font-weight:800}
+  .split-row{display:grid;grid-template-columns:130px 1fr 70px;gap:12px;align-items:center;margin-bottom:10px;font-size:13px}
+  .split-row .lbl{font-weight:700;color:var(--ink)}
+  .split-row .track{height:22px;background:var(--mist);border-radius:6px;overflow:hidden}
+  .split-row .fill{height:100%;background:var(--retif-red);border-radius:6px}
+  .split-row .fill.alt1{background:#3a3e44}
+  .split-row .fill.alt2{background:#9aa0a6}
+  .split-row .val{text-align:right;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+
+  /* SMART */
+  .smart-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:36px}
+  .smart{background:#fff;border:1px solid var(--line);border-top:3px solid var(--retif-red);border-radius:0 0 10px 10px;padding:18px}
+  .smart .letter{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--retif-red);color:#fff;align-items:center;justify-content:center;font-weight:900;font-size:15px;margin-bottom:10px}
+  .smart h5{font-size:13px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;color:var(--ink)}
+  .smart p{font-size:13px;color:var(--graphite);line-height:1.45}
+
+  .roi-banner{background:linear-gradient(135deg,#0d0d0d,#2b2f33);color:#fff;padding:30px;border-radius:14px;margin-top:36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;text-align:center}
+  .roi-banner .roi-num{font-size:38px;font-weight:900;color:var(--retif-red);line-height:1}
+  .roi-banner .roi-lbl{font-size:13px;color:#c8ccd1;margin-top:8px;letter-spacing:.5px}
+
+  footer{background:var(--ink);color:#9aa0a6;padding:36px 28px;font-size:13px;text-align:center}
+  footer .footer-logo{margin-bottom:14px}
+
+  @media(max-width:900px){
+    .hero h1{font-size:38px}
+    .persona-grid,.kpi-row,.offre-grid,.pourquoi-grid,.emo-grid,.synthese .pillars,.story-grid,.campagne-grid,.justif-block{grid-template-columns:1fr}
+    .decli-grid{grid-template-columns:1fr 1fr}
+    .nav ul{display:none}
+  }
+  @media(max-width:600px){
+    .persona-grid,.kpi-row,.offre-grid,.pourquoi-grid,.emo-grid,.synthese .pillars{grid-template-columns:1fr}
+    .decli-grid{grid-template-columns:1fr;max-width:340px;margin:0 auto}
+    section{padding:60px 22px}
+    .hero{padding:60px 22px}
+    .hero h1{font-size:30px}
+    h2.section-title{font-size:28px}
+    .nav-inner{padding:10px 18px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Retif">
+      <img src="20241004_logoretifrouge.png" alt="Retif" style="height:30px;width:auto;display:block"/>
+    </a>
+    <ul>
+      <li><a href="#entreprise">L'entreprise</a></li>
+      <li><a href="#clients">Nos clients</a></li>
+      <li><a href="#offre">Notre offre</a></li>
+      <li><a href="#campagne">La campagne</a></li>
+      <li><a href="#cible">Cible</a></li>
+      <li><a href="#pourquoi">Pourquoi</a></li>
+      <li><a href="#emotion">Émotion</a></li>
+    </ul>
+    <span class="badge-brief">Étude créative</span>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero" id="entreprise">
+  <div class="hero-inner">
+    <div class="hero-logo-block">
+      <img src="20241004_logoretifrouge.png" alt="Retif" style="height:96px;width:auto;display:block;filter:drop-shadow(0 6px 24px rgba(226,35,26,.35))"/>
+      <div class="hero-tag">L'équipementier des commerces<br/>& de la restauration depuis 1968</div>
+    </div>
+
+    <h1>Retif équipe, agence et <em>signe</em> les commerces qui veulent se faire remarquer.</h1>
+    <p class="lead">Acteur historique français devenu une référence européenne du B2B, Retif réunit dans un seul fournisseur tout ce dont un commerce, un restaurant ou un artisan a besoin pour opérer son point de vente — du présentoir au sac kraft, du mannequin à la bouteille personnalisée à son logo.</p>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">1968</div><div class="lbl">Année de fondation</div></div>
+      <div class="kpi"><div class="num">75+</div><div class="lbl">Magasins en Europe</div></div>
+      <div class="kpi"><div class="num">170 000+</div><div class="lbl">Références au catalogue</div></div>
+      <div class="kpi"><div class="num">B2B</div><div class="lbl">100 % cible pros</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 1bis. PRÉSENTATION DÉTAILLÉE -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">1</span>L'entreprise en détail</span>
+    <h2 class="section-title">Un fournisseur unique pour tout l'écosystème du commerce.</h2>
+    <p class="section-intro">Quand un caviste ouvre, quand un restaurant change de carte, quand une boutique refait sa vitrine — Retif est dans la chaîne.</p>
+
+    <div class="story-grid">
+      <div>
+        <p><strong>Origine.</strong> Fondée en 1968, Retif est née pour fournir aux commerçants tous les équipements nécessaires à leur activité. Près de 60 ans plus tard, l'ADN est resté le même : <strong>simplifier la vie des professionnels</strong>.</p>
+        <p><strong>Modèle.</strong> Retif est un acteur omnicanal : un réseau de magasins physiques en Europe, un site e-commerce robuste (retif.eu), un catalogue print, et une logistique B2B taillée pour le réassort rapide.</p>
+        <p><strong>Promesse.</strong> Un seul interlocuteur, une seule facture, une seule livraison pour équiper l'intégralité d'un point de vente. Cette intégration verticale est ce qui distingue Retif des marketplaces génériques et des spécialistes mono-produit.</p>
+        <p><strong>Évolution récente.</strong> L'entreprise a élargi son offre vers des services à plus forte valeur ajoutée — au premier rang desquels la <strong>personnalisation</strong> (impression, gravure, marquage) — pour suivre la demande des artisans et indépendants premium.</p>
+      </div>
+      <aside class="story-side">
+        <h4>Carte d'identité</h4>
+        <ul>
+          <li><span>Secteur</span><b>Équipement professionnel B2B</b></li>
+          <li><span>Origine</span><b>France · 1968</b></li>
+          <li><span>Présence</span><b>Europe (75+ pts vente)</b></li>
+          <li><span>Distribution</span><b>Magasins · Web · Catalogue</b></li>
+          <li><span>Catalogue</span><b>170 000+ références</b></li>
+          <li><span>Domaine .eu</span><b>retif.eu</b></li>
+          <li><span>Positionnement</span><b>Le "tout-en-un" du commerce</b></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 2. CLIENTS -->
+<section id="clients" class="clients-section">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">2</span>Nos clients</span>
+    <h2 class="section-title">Qui achète chez Retif ? Cartographie par poids commercial.</h2>
+    <p class="section-intro">Six grandes familles de clients, classées par leur poids dans le chiffre d'affaires et le panier moyen. Cette segmentation explique pourquoi cette campagne vise un segment précis et premium.</p>
+
+    <table class="clients-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Segment</th>
+          <th>Profil type</th>
+          <th>Poids CA / Budget</th>
+          <th>Cycle d'achat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="rank">1</span></td>
+          <td><b>Commerces de détail</b><br/><span style="color:var(--steel);font-size:13px">Mode, déco, beauté, concept-stores</span></td>
+          <td>Boutiques indépendantes & enseignes (5–50 magasins)</td>
+          <td><div class="bar"><span style="width:95%"></span></div><span style="font-size:12px;color:var(--steel)">Élevé · récurrent</span></td>
+          <td>Saisonnier (4–6×/an)</td>
+        </tr>
+        <tr>
+          <td><span class="rank">2</span></td>
+          <td><b>Restauration (CHR)</b><br/><span style="color:var(--steel);font-size:13px">Restaurants, bars, cafés, brasseries</span></td>
+          <td>Restaurateurs indépendants & groupes</td>
+          <td><div class="bar"><span style="width:80%"></span></div><span style="font-size:12px;color:var(--steel)">Élevé · récurrent</span></td>
+          <td>Continu</td>
+        </tr>
+        <tr>
+          <td><span class="rank">3</span></td>
+          <td><b>Métiers de bouche</b><br/><span style="color:var(--steel);font-size:13px">Cavistes, vignerons, fromagers, traiteurs</span></td>
+          <td>Artisans & TPE premium</td>
+          <td><div class="bar"><span style="width:70%"></span></div><span style="font-size:12px;color:var(--steel)">Moyen · panier élevé</span></td>
+          <td>Saisonnier (vendanges, fêtes)</td>
+        </tr>
+        <tr>
+          <td><span class="rank">4</span></td>
+          <td><b>Boulangerie & pâtisserie</b></td>
+          <td>Artisans-boulangers indépendants</td>
+          <td><div class="bar"><span style="width:55%"></span></div><span style="font-size:12px;color:var(--steel)">Moyen · récurrent</span></td>
+          <td>Mensuel</td>
+        </tr>
+        <tr>
+          <td><span class="rank">5</span></td>
+          <td><b>Hôtellerie</b></td>
+          <td>Hôtels indépendants & chaînes</td>
+          <td><div class="bar"><span style="width:45%"></span></div><span style="font-size:12px;color:var(--steel)">Variable</span></td>
+          <td>Annuel + saisonnier</td>
+        </tr>
+        <tr>
+          <td><span class="rank">6</span></td>
+          <td><b>GMS & grandes enseignes</b></td>
+          <td>Centrales d'achat distribution</td>
+          <td><div class="bar"><span style="width:35%"></span></div><span style="font-size:12px;color:var(--steel)">Volume contractuel</span></td>
+          <td>Annuel</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:20px;font-size:13px;color:var(--steel);font-style:italic">Cette campagne cible prioritairement les segments <b>#3 (métiers de bouche)</b> et <b>#2 (CHR)</b> — segments premium au panier élevé, sensibles à l'identité de marque.</p>
+  </div>
+</section>
+
+<!-- 3. OFFRE -->
+<section id="offre">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">3</span>Notre offre</span>
+    <h2 class="section-title">Tout l'équipement du commerce — et au-delà, un service de personnalisation.</h2>
+    <p class="section-intro">Retif vend bien plus que des produits : un écosystème complet pour équiper, présenter et signer son commerce.</p>
+
+    <div class="offre-grid">
+      <div class="offre"><div class="ico">▣</div><h4>Agencement & PLV</h4><p>Présentoirs, rayonnages, mannequins, signalétique, vitrines.</p></div>
+      <div class="offre featured">
+        <div class="ico">★</div>
+        <h4>Personnalisation sur-mesure</h4>
+        <p>Bouteilles, sacs, étiquettes, packaging gravés ou imprimés à votre logo. <b>C'est l'offre mise en avant par cette campagne.</b></p>
+      </div>
+      <div class="offre"><div class="ico">⌘</div><h4>Emballage & sacs</h4><p>Sacs kraft, boîtes, papiers, packaging alimentaire et cadeau.</p></div>
+      <div class="offre"><div class="ico">◐</div><h4>Mobilier CHR</h4><p>Tables, chaises, bars, tabourets, mobilier de terrasse.</p></div>
+      <div class="offre"><div class="ico">✦</div><h4>Hygiène & entretien</h4><p>Produits, accessoires et équipement nettoyage pro.</p></div>
+      <div class="offre"><div class="ico">◇</div><h4>Saisonnier & événementiel</h4><p>Décoration Noël, soldes, vitrines saisonnières, Halloween.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CAMPAGNE -->
+<section id="campagne" class="campagne-section">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">4</span>La campagne</span>
+    <h2 class="section-title">« Signez votre savoir-faire » — Avril 2026.</h2>
+    <p class="section-intro">Une campagne sociale dédiée à pousser l'offre <b>Personnalisation</b> auprès des artisans premium : cavistes, distillateurs, restaurateurs et hôteliers.</p>
+
+    <div class="campagne-grid">
+      <div class="campagne-text">
+        <h3>L'asset clé : une bannière carrée 1080×1080</h3>
+        <p>Visuel sobre, produit-héros centré, CTA rouge contrasté : tout est calibré pour fonctionner même en miniature, même sans le son, et même en scroll rapide.</p>
+        <div class="campagne-meta">
+          <div><b>Format</b>Carré 1:1 · 1080×1080 px</div>
+          <div><b>Plateformes</b>Instagram · Facebook · LinkedIn</div>
+          <div><b>Objectif</b>Acquisition + notoriété B2B</div>
+          <div><b>KPI principal</b>Clic sur "Personnalisez maintenant"</div>
+        </div>
+      </div>
+
+      <figure class="banner-real">
+        <img src="pomelli_creative_image_1_1_0428.png" alt="Bannière Retif — Signez votre savoir-faire" />
+        <figcaption><span>Format 1:1 — Instagram · Facebook · LinkedIn</span></figcaption>
+      </figure>
+    </div>
+
+    <!-- Justif courte -->
+    <div class="justif-block">
+      <div class="justif-col">
+        <span class="justif-tag">▌ Choix de l'objectif</span>
+        <h3>Notoriété + acquisition.</h3>
+        <p>La personnalisation est un service à <b>cycle d'achat long</b> et à <b>panier élevé</b>. Personne ne cherche spontanément "bouteille avec mon logo" sur Google : il faut d'abord créer le désir. On optimise donc sur le <b>clic et le lead qualifié</b>, pas sur la vente immédiate.</p>
+      </div>
+      <div class="justif-col">
+        <span class="justif-tag">▌ Choix du canal</span>
+        <h3>Social paid : Meta + LinkedIn.</h3>
+        <p>La cible (cavistes, distillateurs, chefs, hôteliers) est <b>visuelle et active sur les feeds sociaux</b>. Meta apporte le volume et le ciblage par centre d'intérêt ; LinkedIn affine sur les titres pros (gérant, fondateur). On écarte Google Search (demande latente) et TikTok (audience hors cible premium).</p>
+      </div>
+    </div>
+
+    <!-- Déclinaisons -->
+    <div class="declinaisons">
+      <h3 class="decli-title">Trois déclinaisons pour couvrir tous les emplacements</h3>
+      <p class="decli-intro">Une même création visuelle adaptée à chaque format social — feed carré, feed portrait et stories/reels en plein écran.</p>
+
+      <div class="decli-grid">
+        <figure class="decli-card">
+          <div class="decli-img-wrap ratio-1-1">
+            <img src="pomelli_creative_image_1_1_0428.png" alt="Bannière 1:1"/>
+          </div>
+          <figcaption>
+            <span class="decli-ratio">1:1 — Carré</span>
+            <b>1080 × 1080 px</b>
+            <small>Feed Facebook, LinkedIn, posts Instagram</small>
+          </figcaption>
+        </figure>
+
+        <figure class="decli-card">
+          <div class="decli-img-wrap ratio-4-5">
+            <img src="pomelli_creative_image_4_5_0428.png" alt="Bannière 4:5"/>
+          </div>
+          <figcaption>
+            <span class="decli-ratio">4:5 — Portrait</span>
+            <b>1080 × 1350 px</b>
+            <small>Feed Instagram (occupation max), LinkedIn portrait</small>
+          </figcaption>
+        </figure>
+
+        <figure class="decli-card">
+          <div class="decli-img-wrap ratio-9-16">
+            <img src="pomelli_creative_image_9_16_0428.png" alt="Bannière 9:16"/>
+          </div>
+          <figcaption>
+            <span class="decli-ratio">9:16 — Vertical</span>
+            <b>1080 × 1920 px</b>
+            <small>Stories, Reels, plein écran mobile</small>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 5. CIBLE -->
+<section id="cible" class="cible-section">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">5</span>Cible de la campagne</span>
+    <h2 class="section-title">À qui parle réellement cette bannière ?</h2>
+    <p class="section-intro">Quatre personas qui partagent un point commun : ils vivent leur métier comme un savoir-faire et veulent que leur produit le crie haut et fort.</p>
+
+    <div class="persona-grid">
+      <div class="persona">
+        <div class="avatar">🍷</div>
+        <div>
+          <h4>Camille — Caviste indépendante</h4>
+          <div class="role">Métier de bouche · Cible #1</div>
+          <p>Tient une cave à Bordeaux. Cherche à créer des coffrets sur-mesure et une cuvée maison signée à son nom pour fidéliser sa clientèle.</p>
+          <div class="needs"><span>Bouteilles personnalisées</span><span>Étiquettes</span><span>Coffrets</span></div>
+        </div>
+      </div>
+      <div class="persona">
+        <div class="avatar">🥃</div>
+        <div>
+          <h4>Marc — Distillateur artisanal</h4>
+          <div class="role">Spiritueux · Cible #2</div>
+          <p>Lance sa marque de gin local. Budget marketing limité mais ambition premium. Le packaging doit faire 80 % du travail de séduction en rayon.</p>
+          <div class="needs"><span>Identité visuelle</span><span>Bouchons & sceaux</span><span>Packaging premium</span></div>
+        </div>
+      </div>
+      <div class="persona">
+        <div class="avatar">🍽️</div>
+        <div>
+          <h4>Sophie — Cheffe restauratrice</h4>
+          <div class="role">CHR · Cible #3</div>
+          <p>Veut sortir une huile d'olive maison et un vinaigre signé du restaurant. Cherche un fournisseur unique pour bouteilles, étiquettes et présentoir.</p>
+          <div class="needs"><span>Produits dérivés</span><span>Étiquettes</span><span>Image de marque</span></div>
+        </div>
+      </div>
+      <div class="persona">
+        <div class="avatar">🏨</div>
+        <div>
+          <h4>Olivier — Directeur d'hôtel boutique</h4>
+          <div class="role">Hôtellerie · Cible #4</div>
+          <p>Souhaite proposer des amenities personnalisées (huile, eau, sel) en chambre, comme signature de l'établissement et vecteur d'expérience.</p>
+          <div class="needs"><span>Amenities</span><span>Branding</span><span>Réassortiment</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. POURQUOI -->
+<section id="pourquoi">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">6</span>Le pourquoi</span>
+    <h2 class="section-title">Pourquoi pousser cette offre <u>maintenant</u> ?</h2>
+    <p class="section-intro">Trois raisons stratégiques expliquent le timing et l'angle de cette campagne sur le marché européen 2026.</p>
+
+    <div class="pourquoi-grid">
+      <div class="pq">
+        <div class="num">01</div>
+        <h4>Le retour du « made by »</h4>
+        <p>Les consommateurs valorisent l'artisanat, le local, l'auteur derrière le produit. Vendre un service de personnalisation, c'est répondre à une tendance de fond, pas à une mode.</p>
+      </div>
+      <div class="pq">
+        <div class="num">02</div>
+        <h4>Différenciation = survie pour les TPE</h4>
+        <p>Face à la concurrence des grandes marques et du e-commerce, l'indépendant n'a qu'une arme : son identité. Retif lui livre les outils visuels qui matérialisent cette identité.</p>
+      </div>
+      <div class="pq">
+        <div class="num">03</div>
+        <h4>Marge & valeur perçue</h4>
+        <p>Une bouteille personnalisée se vend +30 à +50 % plus cher qu'une bouteille générique. La personnalisation est la voie la plus rentable pour les artisans-clients de Retif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ÉMOTION -->
+<section id="emotion" class="emotion-section">
+  <div class="wrap">
+    <span class="eyebrow"><span class="num">7</span>L'émotion partagée</span>
+    <h2 class="section-title">Au-delà du produit, on vend un sentiment.</h2>
+    <p class="section-intro">Cette bannière ne vend pas une bouteille personnalisable. Elle vend un état d'esprit : celui de l'artisan qui assume, qui signe, qui transmet.</p>
+
+    <div class="emo-grid">
+      <div class="emo"><div class="icon">✍️</div><h5>Fierté</h5><p>« Signez » = assumer son nom, son métier, son histoire.</p></div>
+      <div class="emo"><div class="icon">⚜️</div><h5>Légitimité</h5><p>Avoir son logo sur sa bouteille, c'est entrer dans la cour des grandes marques.</p></div>
+      <div class="emo"><div class="icon">⏳</div><h5>Trace durable</h5><p>« Marquer l'esprit durablement » : laisser une empreinte, pas une transaction.</p></div>
+      <div class="emo"><div class="icon">✨</div><h5>Élégance</h5><p>Le visuel sobre et premium élève l'artisan au rang de créateur.</p></div>
+    </div>
+
+    <div class="quote">
+      « Cette bannière dit à un caviste, à un chef, à un distillateur : <b>ton produit mérite ta signature.</b> Et c'est exactement la fierté que Retif veut activer pour faire cliquer son cœur de cible premium. »
+    </div>
+  </div>
+</section>
+
+<!-- SYNTHÈSE -->
+<section class="synthese">
+  <div class="wrap">
+    <h2>En une phrase :<br/>cette bannière fait son travail.</h2>
+    <p>Elle parle un langage de fierté à un public d'artisans, montre un produit-héros chargé de sens, et propose une action immédiate, sur le bon format, au bon segment, au bon moment du marché.</p>
+
+    <div class="pillars">
+      <div class="pill"><h5>Bon public</h5><p>Cavistes, distillateurs, chefs, hôteliers premium.</p></div>
+      <div class="pill"><h5>Bonne promesse</h5><p>« Signez votre savoir-faire » = fierté + différenciation.</p></div>
+      <div class="pill"><h5>Bon moment</h5><p>Tendance artisanat & premiumisation 2026.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <img src="20241004_logoretifrouge.png" alt="Retif" style="height:36px;width:auto;display:inline-block;opacity:.95"/>
+  </div>
+  <div>Document de justification créative · Campagne « Signez votre savoir-faire » · Avril 2026</div>
+  <div style="margin-top:6px">retif.eu — équipement professionnel pour commerces, restauration & artisans.</div>
+</footer>
+
+</body>
+</html>
